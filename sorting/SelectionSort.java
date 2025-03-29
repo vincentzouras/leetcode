@@ -12,19 +12,17 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class SelectionSort {
-    public static void selectionSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            int min = array[i];
-            int minIndex = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < min) {
-                    min = array[j];
-                    minIndex = j;
+    public static void selectionSort(int[] A) {
+        for (int i = 0; i < A.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < A.length; j++) {
+                if (A[j] < A[min]) {
+                    min = j;
                 }
             }
-            int temp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = temp;
+            int temp = A[i];
+            A[i] = A[min];
+            A[min] = temp;
         }
     }
 

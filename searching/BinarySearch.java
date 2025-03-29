@@ -5,12 +5,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BinarySearch {
-    public static int binarySearch(int[] array, int target) {
+    public static int binarySearch(int[] A, int target) {
         int lowIndex = 0;
-        int highIndex = array.length - 1;
+        int highIndex = A.length - 1;
         while (lowIndex <= highIndex) {
             int midIndex = lowIndex + (highIndex - lowIndex) / 2;
-            int midValue = array[midIndex];
+            int midValue = A[midIndex];
             if (midValue == target)
                 return midIndex;
             else if (target < midValue)
